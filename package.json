@@ -1,0 +1,28 @@
+{
+  "name": "trading-bot",
+  "version": "1.0.0",
+  "description": "Simple Node.js SMA trading bot",
+  "main": "tradingBot.js",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "coinspot-api": "^0.1.20",
+    "dotenv": "^16.0.0",
+    "luxon": "^2.3.2",
+    "node-cron": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node tradingBot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeclanElk/trading-bot.git"
+  },
+  "author": "Declan Elkerton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeclanElk/trading-bot/issues"
+  },
+  "homepage": "https://github.com/DeclanElk/trading-bot#readme"
+}
