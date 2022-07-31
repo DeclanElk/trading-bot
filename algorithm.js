@@ -17,7 +17,7 @@ async function run() {
         const currentState = await fetchState.fetchCurrentState();
         const currencyOwned = currentState.eth;
 
-        const currentBuyableAmount = Number((50 / currentPrice.last).toFixed(5))
+        const currentBuyableAmount = Number((100 / currentPrice.last).toFixed(5))
         let result;
 
         //Check if any orders are still in place from the previous cycle
@@ -42,7 +42,7 @@ async function run() {
         else {
             //Check if 3-day has risen above 9-day indicating up trend
             if (threeDaySMA > nineDaySMA) {
-                //Buy ~$50 position
+                //Buy ~$100 position
                 await trade.buy(currentBuyableAmount, currentAsk);
                 result = "Buying a position."
             }
