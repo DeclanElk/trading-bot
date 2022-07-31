@@ -8,7 +8,7 @@ async function fetchNineDay() {
     return new Promise((resolve, reject) => {
         axios.get(url)
         .then(response => {
-            resolve(Number(response.data['Technical Analysis: SMA'][DateTime.now().toFormat('yyyy-MM-dd')].SMA))
+            resolve(Number(response.data['Technical Analysis: SMA'][DateTime.now().minus({hours: 10}).toFormat('yyyy-MM-dd')].SMA))
         })
         .catch(error => {
             reject(error)
@@ -22,7 +22,7 @@ async function fetchThreeDay() {
     return new Promise((resolve, reject) => {
         axios.get(url)
         .then(response => {
-            resolve(Number(response.data['Technical Analysis: SMA'][DateTime.now().toFormat('yyyy-MM-dd')].SMA))
+            resolve(Number(response.data['Technical Analysis: SMA'][DateTime.now().minus({hours: 10}).toFormat('yyyy-MM-dd')].SMA))
         })
         .catch(error => {
             reject(error)
