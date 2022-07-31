@@ -1,6 +1,6 @@
 const cron = require('node-cron');
 const algorithm = require('./algorithm')
 
-cron.schedule('* * * * *', () => {
+cron.schedule('5 * * * *', () => {
     algorithm.run()
 });
